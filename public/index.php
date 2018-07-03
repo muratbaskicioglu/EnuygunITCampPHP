@@ -27,7 +27,13 @@
 		case "form":
 			echo "<pre>";
 			print_r($_POST);
+			print_r($_FILES);
 			echo "</pre>";
+			$fileExtension = explode(".", $_FILES['photo']['name'])[1];
+			$newFileName = "images/" . md5(rand()) . "." . $fileExtension;
+			if(!move_uploaded_file($_FILES["photo"]["tmp_name"], $newFileName)) {
+				echo "File upload error!";
+			}
 			break;
 		default:
 			echo "Page not found.";
