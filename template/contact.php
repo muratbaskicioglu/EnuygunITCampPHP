@@ -1,9 +1,12 @@
-<form id="contact_form" class="contact-form" method="post" action="http://enuygun.com:80?page=form">
+<form id="contact_form" class="contact-form" method="post" action="?page=form" enctype="multipart/form-data">
     <label for="fullname">Fullname: </label>
     <input id="fullname" name="fullname" type="text" placeholder="Enter your fullname" />
     <br />
     <label for="email">Email: </label>
     <input id="email" name="email" type="email" placeholder="Enter your email address" />
+    <br />
+    <label for="photo">Upload your photo</label>
+    <input id="photo" name="photo" type="file" />
     <br />
     <label for="contact">Contact: </label>
     <select id="country" name="contact">

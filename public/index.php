@@ -35,6 +35,9 @@
 				echo "File upload error!";
 			}
 			break;
+		case "add_article":
+			include(TEMPLATE_DIR . "article/add.php");
+			break;
 		default:
 			echo "Page not found.";
 	}
